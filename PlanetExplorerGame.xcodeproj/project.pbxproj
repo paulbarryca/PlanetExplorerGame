@@ -8,17 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		1EDFBD4E28AC274E006689CE /* PlanetExplorerGameApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDFBD4D28AC274E006689CE /* PlanetExplorerGameApp.swift */; };
-		1EDFBD5028AC274E006689CE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDFBD4F28AC274E006689CE /* ContentView.swift */; };
+		1EDFBD5028AC274E006689CE /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDFBD4F28AC274E006689CE /* GameView.swift */; };
 		1EDFBD5228AC2756006689CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1EDFBD5128AC2756006689CE /* Assets.xcassets */; };
 		1EDFBD5528AC2757006689CE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1EDFBD5428AC2757006689CE /* Preview Assets.xcassets */; };
+		1EDFBD5E28AC2D79006689CE /* ShipPixelComponentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDFBD5D28AC2D79006689CE /* ShipPixelComponentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1EDFBD4A28AC274E006689CE /* PlanetExplorerGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlanetExplorerGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1EDFBD4D28AC274E006689CE /* PlanetExplorerGameApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetExplorerGameApp.swift; sourceTree = "<group>"; };
-		1EDFBD4F28AC274E006689CE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		1EDFBD4F28AC274E006689CE /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
 		1EDFBD5128AC2756006689CE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1EDFBD5428AC2757006689CE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		1EDFBD5D28AC2D79006689CE /* ShipPixelComponentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShipPixelComponentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +53,9 @@
 		1EDFBD4C28AC274E006689CE /* PlanetExplorerGame */ = {
 			isa = PBXGroup;
 			children = (
+				1EDFBD5C28AC2D39006689CE /* Views */,
+				1EDFBD5B28AC2D30006689CE /* Model */,
 				1EDFBD4D28AC274E006689CE /* PlanetExplorerGameApp.swift */,
-				1EDFBD4F28AC274E006689CE /* ContentView.swift */,
 				1EDFBD5128AC2756006689CE /* Assets.xcassets */,
 				1EDFBD5328AC2757006689CE /* Preview Content */,
 			);
@@ -65,6 +68,22 @@
 				1EDFBD5428AC2757006689CE /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		1EDFBD5B28AC2D30006689CE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1EDFBD5C28AC2D39006689CE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1EDFBD4F28AC274E006689CE /* GameView.swift */,
+				1EDFBD5D28AC2D79006689CE /* ShipPixelComponentView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +156,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1EDFBD5028AC274E006689CE /* ContentView.swift in Sources */,
+				1EDFBD5028AC274E006689CE /* GameView.swift in Sources */,
+				1EDFBD5E28AC2D79006689CE /* ShipPixelComponentView.swift in Sources */,
 				1EDFBD4E28AC274E006689CE /* PlanetExplorerGameApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

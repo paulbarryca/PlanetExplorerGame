@@ -12,6 +12,8 @@
 		1EDFBD5228AC2756006689CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1EDFBD5128AC2756006689CE /* Assets.xcassets */; };
 		1EDFBD5528AC2757006689CE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1EDFBD5428AC2757006689CE /* Preview Assets.xcassets */; };
 		1EDFBD5E28AC2D79006689CE /* ShipPixelComponentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDFBD5D28AC2D79006689CE /* ShipPixelComponentView.swift */; };
+		1EDFBD6028AC2EB3006689CE /* SpaceShipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDFBD5F28AC2EB3006689CE /* SpaceShipView.swift */; };
+		1EDFBD6228AC3128006689CE /* PlanetComponentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDFBD6128AC3128006689CE /* PlanetComponentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +23,8 @@
 		1EDFBD5128AC2756006689CE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1EDFBD5428AC2757006689CE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		1EDFBD5D28AC2D79006689CE /* ShipPixelComponentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShipPixelComponentView.swift; sourceTree = "<group>"; };
+		1EDFBD5F28AC2EB3006689CE /* SpaceShipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceShipView.swift; sourceTree = "<group>"; };
+		1EDFBD6128AC3128006689CE /* PlanetComponentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetComponentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +86,8 @@
 			children = (
 				1EDFBD4F28AC274E006689CE /* GameView.swift */,
 				1EDFBD5D28AC2D79006689CE /* ShipPixelComponentView.swift */,
+				1EDFBD5F28AC2EB3006689CE /* SpaceShipView.swift */,
+				1EDFBD6128AC3128006689CE /* PlanetComponentView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -157,7 +163,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				1EDFBD5028AC274E006689CE /* GameView.swift in Sources */,
+				1EDFBD6028AC2EB3006689CE /* SpaceShipView.swift in Sources */,
 				1EDFBD5E28AC2D79006689CE /* ShipPixelComponentView.swift in Sources */,
+				1EDFBD6228AC3128006689CE /* PlanetComponentView.swift in Sources */,
 				1EDFBD4E28AC274E006689CE /* PlanetExplorerGameApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

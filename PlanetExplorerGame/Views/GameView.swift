@@ -39,7 +39,11 @@ struct GameView: View {
                 Text("\(self.score)")
                     .foregroundColor(.white)
                     .position(x: geo.size.width - 100, y: geo.size.height / 10 )
-                
+
+                Text("\(self.shipPosition.y)")
+                    .foregroundColor(.white)
+                    .position(x: geo.size.width - 100, y: geo.size.height / 20 )
+
                 self.isPaused ? Button("Resume") { self.resume() } : nil
 
                                 
@@ -102,11 +106,18 @@ struct GameView: View {
     
     func collisionDetection() {
       
+        //detect collision with planent component
         if abs(shipPosition.x - planetComponentPosition.x) < (25 + 10) && abs(shipPosition.y - planetComponentPosition.y) < (25 + 100) {
             self.pause()
             self.isPaused = true
         }
         
+        //detect collision with ground
+        if (shipPosition.y == 800.0){
+            self.pause()
+            self.isPaused = true
+        }
+
         
     }
 

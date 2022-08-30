@@ -12,7 +12,7 @@ struct SpaceShipView: View {
     let rows = 5
     let columns = 5
     let size: CGFloat = 10
-    let heliBlocks: [[Color]] = [[.clear,.clear,.gray,.clear,.clear],
+    var heliBlocks: [[Color]] = [[.clear,.clear,.gray,.clear,.clear],
                                  [.clear,.clear,.green,.clear,.clear],
                                  [.clear,.green,.green,.green,.clear],
                                  [.green,.green,.green,.green,.green],
@@ -32,6 +32,23 @@ struct SpaceShipView: View {
                 }
             }
         }
+    }
+    
+    mutating func fireThrusters()
+    {
+        self.heliBlocks = [[.clear,.clear,.gray,.clear,.clear],
+                                     [.clear,.clear,.green,.clear,.clear],
+                                     [.clear,.green,.green,.green,.clear],
+                                     [.green,.green,.green,.green,.green],
+                                     [.red,.clear,.red,.clear,.red]]
+    }
+    mutating func shutDownThrusters()
+    {
+        self.heliBlocks = [[.clear,.clear,.gray,.clear,.clear],
+                                     [.clear,.clear,.green,.clear,.clear],
+                                     [.clear,.green,.green,.green,.clear],
+                                     [.green,.green,.green,.green,.green],
+                                     [.gray,.clear,.gray,.clear,.gray]]
     }
 }
 

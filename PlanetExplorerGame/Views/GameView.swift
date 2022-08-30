@@ -13,9 +13,12 @@ struct GameView: View {
     @State private var planetComponentPosition = CGPoint(x:1000, y: 300)
     @State private var isPaused = false
     @State private var score = 0
+    @State private var difficulty = 100.0
+    @State private var spaceShipView = SpaceShipView()
     
     @State var timer = Timer.publish(every: 0.1, on: .main, in: .common).autoconnect()
 
+    @State var timer2 = Timer.publish(every: 0.5, on: .main, in: .common).autoconnect()
 
     var body: some View {
         
@@ -24,7 +27,7 @@ struct GameView: View {
         
             ZStack{
 
-                SpaceShipView()
+                spaceShipView
                     .position(self.shipPosition)
                     .onReceive(self.timer) {_ in
                         self.gravity()
@@ -54,12 +57,16 @@ struct GameView: View {
             TapGesture()
                 .onEnded{
                     withAnimation{
-                        self.shipPosition.y -= 100
+                        self.shipPosition.y -= difficulty
+                        self.spaceShipView.fireThrusters()
                     }
             })
                 .onReceive(self.timer) { _ in
                     self.collisionDetection();
                     self.score += 1
+            }
+                .onReceive(self.timer2) { _ in
+                    self.spaceShipView.shutDownThrusters()
             }
         }
         .edgesIgnoringSafeArea(.all)
@@ -110,6 +117,7 @@ struct GameView: View {
         if abs(shipPosition.x - planetComponentPosition.x) < (25 + 10) && abs(shipPosition.y - planetComponentPosition.y) < (25 + 100) {
             self.pause()
             self.isPaused = true
+            self.difficulty = self.difficulty - 10
         }
         
         //detect collision with ground
